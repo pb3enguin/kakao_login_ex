@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Image.network(
                 viewModel.user?.kakaoAccount?.profile?.profileImageUrl ?? ''),
-            Text('${viewModel.isLogined}'),
+            Text('${viewModel.isLogined}, ${viewModel.user?.id}'),
             ElevatedButton(
               onPressed: () async {
                 await viewModel.login();
